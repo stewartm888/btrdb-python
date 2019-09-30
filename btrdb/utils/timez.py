@@ -68,7 +68,7 @@ def ns_to_datetime(ns):
     nanoseconds since epoch as a datetime object : datetime
 
     """
-    dt = datetime.utcfromtimestamp(ns / 1e9)
+    dt = datetime.fromtimestamp(ns / 1e9)
     return dt.replace(tzinfo=pytz.utc)
 
 
